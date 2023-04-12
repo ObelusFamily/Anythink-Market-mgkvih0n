@@ -13,8 +13,6 @@ services:
     working_dir: /usr/src
     volumes:
       - ./:/usr/src
-    env_file:
-      - ./backend/.env/.prod
     ports:
       - "3000:3000"
     environment:
