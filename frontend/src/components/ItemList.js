@@ -15,6 +15,7 @@ const ItemList = (props) => {
     <div className="container py-2">
       <div className="row">
         {props.items.map((item) => {
+          if (!item.image) { item.image = window.location.origin + '/placeholder.png' }
           return (
             <div className="col-sm-4 pb-2" key={item.slug}>
               <ItemPreview item={item} />
